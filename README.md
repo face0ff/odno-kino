@@ -1,1 +1,1 @@
-# odno-kino
+http://odno-kino.herokuapp.com/

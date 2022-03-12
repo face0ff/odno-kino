@@ -1,0 +1,136 @@
+.body{
+background:url('36f65605-9eb3-4a5b-832e-2150b592805a.jpg.thumbnail.jpg');
+
+background-size: 100%;
+
+}
+
+h2{
+
+text-align: center;
+	font-family: 'Russo One', sans-serif;
+	color: #fcf7f9;
+
+}
+
+
+
+
+input[type="submit"] {
+
+        border: none !important;
+        font-size:0;
+        height: 75px;
+        width: 150px;
+        cursor: pointer;
+        background:url('poisk.png') no-repeat;
+        background-size: 100%;
+        margin-top: 2%
+}
+
+
+
+input[type=checkbox] + span
+   {
+
+
+
+        cursor: pointer;
+
+   }
+
+   input[type=checkbox]:checked + span
+    {
+
+        border: 5px dotted black;
+
+    }
+
+label {
+font-size: 25px;
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+	color: #fcf7f9;
+
+}
+
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+  grid-template-areas:
+    "header"
+    "vibor"
+    "button"
+    "otvet";
+
+
+
+}
+.header { grid-area: header;
+
+    display: grid;
+    min-height: 50vw;
+
+    background:url('2323.png') no-repeat;
+    background-size: 100%;
+
+
+
+ }
+.butt { grid-area: button;
+
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    margin: auto;
+
+
+
+
+
+
+  }
+
+
+
+
+.vibor { grid-area: vibor;
+
+display:grid;
+margin-top: 2%;
+grid-gap: 15px;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+grid-template-rows: 1fr 1fr 1fr 1fr;
+text-align: center;
+
+
+
+}
+
+.otvet { grid-area: otvet;
+display:grid;
+text-align: center;
+	font-family: 'Russo One', sans-serif;
+	color: #fcf7f9;
+
+grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+
+}
+.year{
+
+display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    margin: auto;
+}

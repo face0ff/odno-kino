@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Главная страница
+
+{% endblock %}
+
+{% block body %}
+
+<div class="grid-container">
+    <div class="header"></div>
+
+
+
+
+
+
+    <form method="post">
+    <input class='year' type="text" name="year" value="" placeholder="Выбрать год!">
+    <div class="vibor">
+
+
+
+
+        <div class="box1"><label><input type="checkbox"  name="a" value="Триллеры" hidden/><span>Триллеры</span><br></label></div>
+        <div class="box2"><label><input type="checkbox" name="b" value="Драмы" hidden/><span>Драмы</span><br></label></div>
+        <div class="box3"><label><input type="checkbox" name="c" value="Наши" hidden/><span>Наши</span><br></label></div>
+        <div class="box4"><label><input type="checkbox" name="d" value="Детективы" hidden/><span>Детективы</span><br></label></div>
+        <div class="box5"><label><input type="checkbox" name="e" value="Криминал" hidden/><span>Криминал</span><br></label></div>
+        <div class="box6"><label><input type="checkbox" name="f" value="Мелодрамы" hidden/><span>Мелодрамы</span><br></label></div>
+        <div class="box7"><label><input type="checkbox" name="g" value="Исторические" hidden/><span>Исторические</span><br></label></div>
+        <div class="box8"><label><input type="checkbox" name="h" value="Комедии" hidden/><span>Комедии</span><br></label></div>
+        <div class="box9"><label><input type="checkbox" name="i" value="Ужасы" hidden/><span>Ужасы</span><br></label></div>
+        <div class="box10"><label><input type="checkbox" name="j" value="Фэнтези" hidden/><span>Фэнтези</span><br></label></div>
+        <div class="box11"><label><input type="checkbox" name="k" value="Украинские" hidden/><span>Украинские</span><br></label></div>
+        <div class="box12"><label><input type="checkbox" name="l" value="Арт-хаус" hidden/><span>Арт-хаус</span><br></label></div>
+        <div class="box13"><label><input type="checkbox" name="m" value="Короткометражные" hidden/><span> Короткометражные</span><br></label></div>
+        <div class="box14"><label><input type="checkbox" name="n" value="Фантастика" hidden/><span>Фантастика</span><br></label></div>
+        <div class="box15"><label><input type="checkbox" name="o" value="Вестерны" hidden/><span>Вестерны</span><br></label></div>
+        <div class="box16"><label><input type="checkbox" name="p" value="Детские" hidden/><span>Детские</span><br></label></div>
+        <div class="box17"><label><input type="checkbox" name="q" value="Семейные" hidden/><span>Семейные</span><br></label></div>
+        <div class="box18"><label><input type="checkbox" name="r" value="Зарубежные" hidden/><span>Зарубежные</span><br></label></div>
+        <div class="box19"><label><input type="checkbox" name="s" value="Боевики" hidden/><span>Боевики</span><br></label></div>
+        <div class="box20"><label><input type="checkbox" name="t" value="Приключения" hidden/><span>Приключения</span><br></label></div>
+        <div class="box21"><label><input type="checkbox" name="u" value="Эротика" hidden/><span>Эротика</span><br></label></div>
+        <div class="box22"><label><input type="checkbox" name="v" value="Мюзиклы" hidden/><span>Мюзиклы</span><br></label></div>
+        <div class="box23"><label><input type="checkbox" name="w" value="Биографические" hidden/><span>Биографические</span><br></label></div>
+        <div class="box24"><label><input type="checkbox" name="x" value="Познавательные" hidden/><span>Познавательные</span><br></label></div>
+        <div class="box25"><label><input type="checkbox" name="y" value="Документальные" hidden/><span>Документальные</span><br></label></div>
+        <div class="box26"><label><input type="checkbox" name="z" value="Спортивные" hidden/><span>Спортивные</span><br></label></div>
+        <div class="box27"><label><input type="checkbox" name="aa" value="Военные" hidden/><span>Военные</span><br></label></div>
+        <div class="box28"><label><input type="checkbox" name="bb" value="Путешествия" hidden/><span>Путешествия</span><br></label></div>
+
+
+
+</div>
+        <div class="butt"> <input type="submit" value=" "></div>
+  </form>
+
+<h2>Вы выбрали жанры - {{ ganre }} <br>  {{ year }} года</h2>
+
+
+
+
+
+    <div class="otvet">
+
+
+
+
+{% for n in naz1 %}
+
+  <p>{{n.imdb}} из {{n.prosmotr}} просмотров! <br> <a href="{{ n.href }}"><img src="{{ n.pic_href }}"></a></p>
+<!--<br>{{ n.nazFilm }}-->
+  {%endfor%}
+
+    {% for n in naz3 %}
+
+        <p>{{n.imdb}} из {{n.prosmotr.replace("(", "").replace(")", "")}} просмотров! <br> <a href="{{ n.href }}"><img src="{{ n.pic_href }}"></a></p>
+
+  {% endfor %}
+
+        {% for n in naz %}
+
+  <p>{{n.imdb}} из {{n.prosmotr}} просмотров! <br> <a href="{{ n.href }}"><img src="{{ n.pic_href }}"></a></p>
+<!--<br>{{ n.nazFilm }}-->
+  {%endfor%}
+
+    {% for n in naz2 %}
+
+        <p>{{n.imdb}} из {{n.prosmotr.replace("(", "").replace(")", "")}} просмотров! <br> <a href="{{ n.href }}"><img src="{{ n.pic_href }}"></a></p>
+
+  {% endfor %}
+
+
+
+{% endblock %}
+    </div>
+</div>
+
+
